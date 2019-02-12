@@ -2,7 +2,7 @@ server:
   port: 8010
 spring:
   application:
-    name: case
+    name: case-server
   datasource:
     druid:
       url: jdbc:mysql://localhost:3306/zts_cloud?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
@@ -52,7 +52,7 @@ spring:
         reset-enable: false
         # 需要账号密码才能访问控制台
         login-username: druid
-        login-password: druid123
+        login-password: druid
         # IP白名单
         # allow: 127.0.0.1
         # IP黑名单（共同存在时，deny优先于allow）
