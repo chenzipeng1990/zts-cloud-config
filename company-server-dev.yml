@@ -73,7 +73,7 @@ spring:
       profile: dev
       label: master
       discovery:
-        service-id: config
+        service-id: config-server
       enabled: true
       retry:
         initial-interval: 2000
