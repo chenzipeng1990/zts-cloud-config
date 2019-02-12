@@ -33,8 +33,6 @@ spring:
       filters: stat
       # Spring监控AOP切入点，如x.y.z.service.*,配置多个英文逗号分隔
       #aop-patterns: com.zts.dao.*
-
-
       # WebStatFilter配置
       web-stat-filter:
         enabled: true
@@ -42,7 +40,6 @@ spring:
         url-pattern: /*
         # 忽略过滤的格式
         exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
-
       # StatViewServlet配置
       stat-view-servlet:
         enabled: true
@@ -62,7 +59,6 @@ spring:
       filter:
         stat:
           log-slow-sql: true
-
     jpa:
       hibernate:
         ddl-auto: update  # 第一次简表create  后面用update 还是 validate 呢
@@ -114,3 +110,12 @@ eureka:
     service-url:
       #设置与Eureka Server交互的地址，查询服务和注册服务都需要依赖这个地址。默认是http://localhost:8761/eureka ；多个地址可使用 , 分隔。
       defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/,http://localhost:8763/eureka/
+#关闭安全认证
+management:
+  security:
+    enabled: false
+  #refresh接入点显式暴露出来
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info,bus-refresh
