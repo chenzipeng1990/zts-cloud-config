@@ -1,4 +1,4 @@
-name: zts-cloud
+name: zts-cloud by zts
 version: 1.0.0
 server:
   tomcat:
