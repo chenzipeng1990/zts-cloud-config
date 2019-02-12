@@ -1,3 +1,4 @@
+name: zts-cloud
 server:
   tomcat:
     max-threads: 500
